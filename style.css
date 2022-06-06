@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  background-color: var(--cream);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  font-family: "DM Sans", sans-serif;
+}
+
+.container {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  background-color: var(--soft-red);
+  padding: 2rem;
+  border-radius: 1rem;
+  color: var(--very-pale-orange);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.balance {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.balance__title {
+  font-weight: 300;
+}
+
+.balance__price {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.circle__dark,
+.circle__white {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.circle__dark {
+  background-color: var(--dark-brown);
+}
+.circle__white {
+  border: 2px solid var(--very-pale-orange);
+  margin-top: -3rem;
+  margin-left: -1.5rem;
+}
+
+.main {
+  background-color: var(--very-pale-orange);
+  padding: 2rem;
+}
+
+.heading {
+  font-size: 2rem;
+  color: var(--dark-brown);
+  margin-bottom: 3rem;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.8rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--cream);
+  margin-bottom: 2rem;
+}
+.bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+.amount {
+  width: 3rem;
+  background-color: var(--soft-red);
+  border-radius: 3px;
+}
+
+.day {
+  color: var(--medium-brown);
+}
+
+.total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-title {
+  font-weight: 400;
+  color: var(--medium-brown);
+  grid-column: span 2;
+}
+.total__price {
+  font-size: 2.5rem;
+  color: var(--dark-brown);
+  font-weight: 700;
+}
+.last {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+.num {
+  margin-left: auto;
+  color: var(--dark-brown);
+  font-weight: 700;
+}
+.month {
+  color: var(--medium-brown);
+}
