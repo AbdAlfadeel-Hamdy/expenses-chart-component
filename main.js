@@ -36,6 +36,7 @@ const displayBars = function () {
   data.forEach((bar) => {
     const text = `
   <div class="bar">
+  <div class="value">$${bar.amount}</div>
   <div class="amount" style="height: ${bar.amount * 1.8}px"></div>
   <div class="day">${bar.day}</div>
 </div>
@@ -58,3 +59,5 @@ const renderLongestBar = function () {
 };
 
 renderLongestBar();
+
+console.log(document.querySelector(".btn::before"));
