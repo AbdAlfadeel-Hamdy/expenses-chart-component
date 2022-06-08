@@ -50,7 +50,7 @@ displayBars();
 const renderLongestBar = function () {
   const bars = [...document.querySelectorAll(".amount")];
   const heighestVal = Math.max(
-    ...bars.map((bar) => Number.parseFloat(+bar.style.height))
+    ...bars.map((bar) => Number.parseFloat(bar.style.height))
   );
   const heighestBar = bars.find(
     (bar) => +bar.style.height.slice(0, -2) === heighestVal
